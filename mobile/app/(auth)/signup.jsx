@@ -11,8 +11,7 @@ export default function Index() {
       }}
     >
       <Text>Hello</Text>
-      <Link href="/(auth)/signup">Singup</Link>
-      <Link href="/(auth)">login</Link>
+      <Link href="/">HOME</Link>
     </View>
   );
 }
