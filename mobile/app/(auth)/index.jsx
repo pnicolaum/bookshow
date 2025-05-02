@@ -17,14 +17,13 @@ import {
   import { Ionicons } from "@expo/vector-icons";
   import COLORS from "../../constants/colors";
   
-//   import { useAuthStore } from "../../store/authStore";
+  import { useAuthStore } from "../../store/authStore";
   
   export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
-    const { isLoading, login, isCheckingAuth } = useState(false);
-    // const { isLoading, login, isCheckingAuth } = useAuthStore();
+    const { isLoading, login, isCheckingAuth } = useAuthStore();
   
     const handleLogin = async () => {
       const result = await login(email, password);
@@ -41,17 +40,17 @@ import {
       >
       <Pressable 
         onPress={Keyboard.dismiss}
-        style={{ flex: 1, pointerEvents: "box-none" }}
+        style={{ flex: 1 }}
         >       
         <View style={styles.container}>
           {/* ILLUSTRATION */}
-          <View style={styles.topIllustration}>
+          {/* <View style={styles.topIllustration}>
             <Image
               source={require("../../assets/images/i.png")}
               style={styles.illustrationImage}
               resizeMode="contain"
             />
-          </View>
+          </View> */}
   
           <View style={styles.card}>
             <View style={styles.formContainer}>
