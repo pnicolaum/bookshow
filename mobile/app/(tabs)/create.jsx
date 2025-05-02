@@ -51,7 +51,7 @@ export default function Create() {
         mediaTypes: "images",
         allowsEditing: true,
         aspect: [4, 3],
-        quality: 0.5, // lower quality for smaller base64
+        quality: 0.1, // lower quality for smaller base64
         base64: true,
       });
 

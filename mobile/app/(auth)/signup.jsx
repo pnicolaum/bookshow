@@ -46,7 +46,7 @@ export default function Signup() {
         <View style={styles.card}>
           {/* HEADER */}
           <View style={styles.header}>
-            <Text style={styles.title}>BookShow📖</Text>
+            <Text style={styles.title}>BookShow 📖</Text>
             <Text style={styles.subtitle}>Share your favorite reads</Text>
           </View>
 
