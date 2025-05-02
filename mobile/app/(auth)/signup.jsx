@@ -40,8 +40,8 @@ export default function Signup() {
     >
     <Pressable 
       onPress={Keyboard.dismiss}
-      style={{ flex: 1 }}
-    >
+      style={{ flex: 1, pointerEvents: "box-none" }}
+      >
       <View style={styles.container}>
         <View style={styles.card}>
           {/* HEADER */}

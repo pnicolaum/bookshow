@@ -41,8 +41,8 @@ import {
       >
       <Pressable 
         onPress={Keyboard.dismiss}
-        style={{ flex: 1 }}
-      >       
+        style={{ flex: 1, pointerEvents: "box-none" }}
+        >       
         <View style={styles.container}>
           {/* ILLUSTRATION */}
           <View style={styles.topIllustration}>
