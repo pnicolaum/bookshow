@@ -7,7 +7,7 @@ import {
     ActivityIndicator,
     KeyboardAvoidingView,
     Keyboard,
-    TouchableWithoutFeedback,
+    Pressable,
     Platform,
     Alert,
   } from "react-native";
@@ -35,11 +35,14 @@ import {
     if (isCheckingAuth) return null;
   
     return (
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <KeyboardAvoidingView
         style={{ flex: 1 }}
         behavior={Platform.OS === "ios" ? "padding" : "height"}
       >
+      <Pressable 
+        onPress={Keyboard.dismiss}
+        style={{ flex: 1 }}
+      >       
         <View style={styles.container}>
           {/* ILLUSTRATION */}
           <View style={styles.topIllustration}>
@@ -128,8 +131,8 @@ import {
             </View>
           </View>
         </View>
+      </Pressable>
       </KeyboardAvoidingView>
-      </TouchableWithoutFeedback>
 
     );
   }

@@ -4,7 +4,7 @@ import {
   Platform,
   KeyboardAvoidingView,
   Keyboard,
-  TouchableWithoutFeedback,
+  Pressable,
   TextInput,
   TouchableOpacity,
   ActivityIndicator,
@@ -34,10 +34,13 @@ export default function Signup() {
   };
 
   return (
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <KeyboardAvoidingView
       style={{ flex: 1 }}
       behavior={Platform.OS === "ios" ? "padding" : "height"}
+    >
+    <Pressable 
+      onPress={Keyboard.dismiss}
+      style={{ flex: 1 }}
     >
       <View style={styles.container}>
         <View style={styles.card}>
@@ -141,7 +144,7 @@ export default function Signup() {
           </View>
         </View>
       </View>
+    </Pressable>
     </KeyboardAvoidingView>
-    </TouchableWithoutFeedback>
   );
 }
