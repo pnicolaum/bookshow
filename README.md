@@ -2,7 +2,6 @@
 
 **BookShow** is a mobile application built with **React Native (Expo)** for the frontend and **Node.js** for the backend. It allows users to share and discover book recommendations through posts that include ratings, images, and descriptions.
 
----
 
 ## 🧠 Project Description
 
@@ -16,7 +15,6 @@ BookShow is designed to promote reading by enabling users to share book recommen
   - View personal information  
   - Delete their own posts  
 
----
 
 ## 🚀 Technologies Used
 
@@ -30,7 +28,6 @@ BookShow is designed to promote reading by enabling users to share book recommen
 - MongoDB
 - JWT (JSON Web Tokens)
 
----
 
 ## 🛠️ Installation & Setup
 
@@ -41,7 +38,6 @@ BookShow is designed to promote reading by enabling users to share book recommen
 - **Backend Hosting**: [Render](https://render.com/)  
 - **Frontend Hosting**: [Expo Go](https://expo.dev/)
 
----
 
 ### 2. Clone the Repository & Configure Environment
 
@@ -79,3 +75,16 @@ npm install
 npm run dev
 
 ```
+
+
+### 3. 📱 Tips for Emulating
+
+For the best development experience, it's recommended to:
+
+- ✅ **Use the [Expo Go](https://expo.dev/client) app** on your mobile device (iOS or Android) and scan the **QR code** that appears when running `npx expo start`.
+- 🧪 If you prefer to emulate on your computer, you can:
+  - Install an **Android emulator** (e.g., Android Studio)
+  - Use an **iOS simulator** (available on macOS via Xcode)
+
+⚠️ **Note:** This app is designed for mobile devices and is **not intended to run in a web browser**. Use a physical device or emulator for accurate testing.
+
