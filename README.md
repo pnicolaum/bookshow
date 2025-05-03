@@ -77,7 +77,7 @@ npm run dev
 ```
 
 
-### 3. 📱 Tips for Emulating
+## 📱 Tips for Emulating
 
 For the best development experience, it's recommended to:
 
