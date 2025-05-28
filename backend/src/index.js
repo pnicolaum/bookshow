@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import "dotenv/config";
-import job from "./lib/cron.js";
+// import job from "./lib/cron.js";
 import rateLimit from "express-rate-limit";
 
 import authRoutes from "./routes/authRoutes.js";
@@ -17,7 +17,8 @@ const limiter = rateLimit({
   message: 'Demasiadas solicitudes desde esta IP, intenta nuevamente más tarde.',
 });
 app.use(limiter);
-job.start(); 
+
+// job.start(); 
 
 app.use(express.json());
 app.use(cors());
