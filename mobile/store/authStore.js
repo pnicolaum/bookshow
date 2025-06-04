@@ -1,6 +1,17 @@
 import { create } from "zustand";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import jwtDecode from "jwt-decode"; 
 import { API_URL } from "../constants/api";
+
+function isTokenExpired(token) {
+  try {
+    const decoded = jwtDecode(token);
+    const now = Date.now() / 1000; // en segundos
+    return decoded.exp < now;
+  } catch (e) {
+    return true; // Si no se puede decodificar, se considera expirado
+  }
+}
 
 export const useAuthStore = create((set) => ({
   user: null,
@@ -78,9 +89,16 @@ export const useAuthStore = create((set) => ({
       const userJson = await AsyncStorage.getItem("user");
       const user = userJson ? JSON.parse(userJson) : null;
 
-      set({ token, user });
+      if (!token || isTokenExpired(token)) {
+        await AsyncStorage.removeItem("token");
+        await AsyncStorage.removeItem("user");
+        set({ token: null, user: null });
+      } else {
+        set({ token, user });
+      }
     } catch (error) {
       console.log("Auth check failed", error);
+      set({ token: null, user: null });
     } finally {
       set({ isCheckingAuth: false });
     }
